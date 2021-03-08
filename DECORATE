@@ -61,7 +61,6 @@ Actor IsTacticalClass : Inventory {} //Fake item to fix the lag.
 //DECORATIONS
 #include "actors/Decorations/FURNITURE.dec"
 #include "actors/Decorations/LAMPS.dec"
-#include "actors/Decorations/NATURAL.dec"
 #include "actors/Decorations/FIREWORKS.dec"
 #include "actors/Decorations/TORCHES.dec"
 #include "actors/Decorations/DEAD.dec"
