@@ -72,9 +72,8 @@ Actor HasSpawnedAsRevenantDemon : Inventory
 inventory.maxamount 1
 }
 
-Actor DemonVision : PowerLightAmp
+Actor DemonVision : PowerUp
 {
-Powerup.Color RedMap
 Powerup.Duration 2500
 }
 
