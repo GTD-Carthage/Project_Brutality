@@ -800,22 +800,24 @@ OptionMenu "SpawnSettings"
 
 OptionValue "PBSpawnChoices"
 {
-666, "Randomized Progression"
-667, "Tier 1"
-668, "Tier 2"
-669, "Tier 3"
-670, "Tier 4"
-671, "Tiered Progression"
-672, "DeathWish" //YE
-663, "Chaotic Random"
-//674, "Pistol Starts"
-675, "Vanilla Doom"
+	666, "Randomized Progression"
+	667, "Tier 1"
+	668, "Tier 2"
+	669, "Tier 3"
+	670, "Tier 4"
+	671, "Tiered Progression"
+	672, "DeathWish" //YE
+	663, "Chaotic Random"
+	//674, "Pistol Starts"
+	675, "Vanilla Doom"
+	676, "Randomized Episode"
+	677, "Tiered Episode"
 }
 
 OptionValue "HealthPackColor"
 {
-0, "Green"
-1, "White"
+	0, "Green"
+	1, "White"
 }
 
 ListMenu "MainMenu"
