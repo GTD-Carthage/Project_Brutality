@@ -551,7 +551,7 @@ ACTOR M2PlasmaRifle : PB_Weapon //12222
 			A_Zoomfactor(1.0);
 			PB_WeaponRecoil(-0.84,+0.26);
 			}
-		M211 DE 5 {
+		M211 DE 4 {
 			if (CountInv("HasLightningGunUpgrade") >= 1 ) { A_SetWeaponSprite("PR2F");}
 			A_DoPBWeaponAction(WRF_ALLOWRELOAD);
 			}
