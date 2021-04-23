@@ -17,7 +17,7 @@ ACTOR FodderLaser {
 	Game Doom
 	Radius 2
 	Height 1
-	Speed 70
+	Speed 45
 	Damage 0
 	+RANDOMIZE
 	+MISSILE
@@ -219,7 +219,7 @@ actor ZombieFlyer
     Health 225
     Radius 32
     Height 56
-    Speed 20
+    Speed 10
     PainChance 240
 	SpawnID 1295
     MONSTER 
