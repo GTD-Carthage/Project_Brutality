@@ -90,7 +90,8 @@ ACTOR ExplosiveBarrel1 : SwitchableDecoration Replaces ExplosiveBarrel
 	Height 34
     Mass 200
 	DamageType ExplosiveImpact
-	MONSTER
+	+SOLID
+	+SHOOTABLE
 	-COUNTKILL
 	+NOBLOOD
 	+FRIENDLY
