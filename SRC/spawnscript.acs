@@ -4,9 +4,7 @@
 Script "SpawnerScript" (int LevelNumber)
 {
 	LevelNumber = GetLevelInfo(LEVELINFO_CLUSTERNUM);
-	int MapNumber = GetLevelInfo(LEVELINFO_LEVELNUM);
-
-	int spawnbalancecvar = GetCvar("Brutalspawnbalance");
+	int spawnbalancecvar = GetCvar("spawnbalance");
     //This part of the script will check a cvar and set an actor's state accordingly.
 	switch (spawnbalancecvar)
 	{
@@ -82,67 +80,17 @@ Script "SpawnerScript" (int LevelNumber)
 			SetActorState(0,"DicePistolStart",true);
 			break;
 		case 675:
-			SetActorState(0,"ReplaceBrutalOnly",true);
-			break;
-		case 676:
-			switch (MapNumber)
-			{
-				case 1:
-				case 5:
-					SetActorState(0,"EarlyLevelMob",true);
-					break;
-				case 2:
-				case 6:
-					SetActorState(0,"LowLevelMob",true);
-					break;
-				case 3:
-				case 7:
-					SetActorState(0,"MidLevelMob",true);
-					break;
-				case 4:
-				case 8:
-					SetActorState(0, "HighLevelMob",true);
-					break;
-				default:
-					if (LevelNumber > 8) SetActorState(0, "HighLevelMob",true);
-					else SetActorState(0,"LowLevelMob",true);
-					break;
-			}
-			break;
-		case 677:
-			switch (MapNumber)
-			{
-				case 1:
-				case 5:
-					SetActorState(0,"DiceTier1",true);
-					break;
-				case 2:
-				case 6:
-					SetActorState(0,"DiceTier2",true);
-					break;
-				case 3:
-				case 7:
-					SetActorState(0,"DiceTier3",true);
-					break;
-				case 4:
-				case 8:
-					SetActorState(0, "DiceTier4",true);
-					break;
-				default:
-					if (LevelNumber > 8) SetActorState(0, "DiceTier4",true);
-					else SetActorState(0,"DiceTier2",true);
-					Break;
-			}
+			SetActorState(0,"ReplaceVanilla",true);
 			break;
 		Default:
 		//If this gets called, it means i've done something terribly wrong! 
-		//Or that someone mucked with the brutalspawnbalance cvar!
+		//Or that someone mucked with the spawnbalance cvar!
 		//So we set it back to 1 and send it back to spawn where it will try again
 		Log(s:"------------------------------------------------------");
 		Log(s:"ERROR! SPAWN PRESET CVAR OUT OF KNOWN BOUNDARY!");
 		Log(s:"Changing Spawn Preset To Default");
 		Log(s:"------------------------------------------------------");
-		SetCVar("BrutalSpawnBalance", 666);
+		SetCVar("spawnbalance", 666);
 		SetActorState(0,"DiceMain",true);
 		break;
 	}
